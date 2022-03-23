@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+ о нас
+{% endblock %}
+
+{% block content %}
+    {% for el in tasks %}
+
+        <div>
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.task}}</p>
+            <p>{{ el.id}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

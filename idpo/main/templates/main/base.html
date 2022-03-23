@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header_body">
+            <div class="logo">
+                <a href="{% url 'home' %}" class="header_logo">
+                    <img src="{%static 'img/logo.png'%}" alt="">
+                </a>
+                <a href="{% url 'home' %}" class="logo_text">ИНСТИТУТ ДОПОЛНИТЕЛЬНОГО<br>ПРОФЕССИОНАЛЬНОГО<br>ОБРАЗОВАНИЯ И ОБУЧЕНИЯ</a>
+                <nav class="header_menu">
+                    <ul class="header_list">
+                        <li>
+                            <a href="" class="header_link">Об Институте</a>
+                            <ul class="header_sub_list">
+                                <li>
+                                    <a href="" class="header_sub_link">Основные сведения</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'about' %}" class="header_sub_link">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="" class="header_sub_link">Руководство</a>
+                                </li>
+                                <li>
+                                    <a href="" class="header_sub_link">Сотрудники</a>
+                                </li>
+                                <li>
+                                    <a href="" class="header_sub_link">Преподаватели</a>
+                                </li>
+                                <li>
+                                </li>
+                                <li>
+                                    <a href="" class="header_sub_link">Пресса об ИДПО</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="header_link">Документы</a>
+                            <ul class="header_sub_list">
+                                <li>
+                                    <a href="" class="header_sub_link">Выдаваемые документы</a>
+                                </li>
+
+                                <li>
+                                    <a href="" class="header_sub_link">Нормативные документы</a>
+                                </li>
+
+                                <li>
+                                    <a href="" class="header_sub_link">Платные образовательные услуги</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="header_link">Направления обучения</a>
+                        </li>
+                        <li>
+                            <a href="" class="header_link">Контакты</a>
+                        <li>
+                            <a href="" class="header_link">Вакансии</a>
+                             <ul class="header_sub_list">
+                                <li>
+                                    <a href="" class="header_sub_link">Вакансии "Гипермаркет Магнит" Ухта</a>
+                                </li>
+                                <li>
+                                    <a href="" class="header_sub_link">Вакансии "ЛУКОЙЛ-УНП"</a>
+                                </li>
+                                <li>
+                                    <a href="" class="header_sub_link">Вакансии Автошкола ИДПО</a>
+                                </li>
+                                <li>
+                                    <a href="" class="header_sub_link">Вакансии ГОДОГРАФ</a>
+                                </li>
+                                <li>
+                                    <a href="" class="header_sub_link">Вакансии ДЦРО "Умный"</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="" class="header_link">Условия обучения</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header_nav">
+                <ul>
+                    <li>
+                        <a href="">Школа охранников</a>
+                    </li>
+                    <li>
+                        <a href="">Автошкола</a>
+                    </li>
+                    <li>
+                        <a href="">(8216) 738-770</a>
+                    </li>
+                </ul>
+                <div class="lang">
+                    <a href="" class="active">RU</a>
+                    <a href="">EG</a>
+                </div>
+
+            </div>
+
+
+
+            <div class="right-nav">
+                <div class="search-box">
+                    <input type="text" class="search-txt" placeholder="Поиск">
+                    <a href="#" class="search-btn"><img src="{%static 'img/search.png'%}"></a>
+                </div>
+            </div>
+
+            <div class="header_burger">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% block slider %}{% endblock %}
+
+<div class="content">
+    <div class="main_content">
+
+        {% block content %}{% endblock %}
+
+    </div>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afbf9a4016ee5d0bf269448594f123a5b9350f5e852d529e68f357cfa63e2215f&amp;width=100%25&amp;height=250&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+
+
+
+
+
+
+<!-- js -->
+    <script ENGINE="text/javascript" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="{%static 'js/slick.min.js'%}"></script>
+    <script src="{%static 'js/script.js'%}"></script>
+
+</body>
+</html>

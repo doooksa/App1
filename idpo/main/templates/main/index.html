@@ -1,0 +1,183 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+ ИДПО
+{% endblock %}
+
+{% block slider %}
+<div class="slider">
+    <div class="slide">
+        <div class="slide-content">
+            <h1>Программы повышения квалификации в сфере информационных технологий</h1>
+            <p>Ближайшая дата начала обучения: Зачисление по мере поступления заявок от слушателей.</p><br>
+            
+            <a href="#">Подробнее</a>
+        </div>
+        <img src="{%static 'img/slide/1.png'%}"  alt="">
+    </div>
+    <div class="slide">
+      <div class="slide-content">
+        <h1>Набор в группы профессиональной переподготовки "АНГЛИЙСКИЙ ЯЗЫК в сфере коммуникаций"</h1>
+        <p>Зачисление по мере поступления заявок от слушателей..</p><br>
+        
+        <a href="#">Подробнее</a>
+    </div>
+
+        <img src="{%static 'img/slide/2.jpg'%}"  alt="">
+    </div>
+
+    </div>
+</div>
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="grid">
+
+  <div class="bl_l">
+
+      <div class="bloks">
+        <a href="">
+          <img src="{%static 'img/bloks/1.jpg'%}"  alt="">
+          <h3>Профессиональная переподготовка</h3>
+        </a>
+        <a href="">
+          <img src="{%static 'img/bloks/2.jpg'%}"  alt="">
+          <h3>Повышение квалификации</h3>
+        </a>
+        <a href="">
+          <img src="{%static 'img/bloks/3.jpg'%}"  alt="">
+          <h3>Программы обучения экспертов</h3>
+        </a>
+        <a href="">
+          <img src="{%static 'img/bloks/4.jpg'%}"  alt="">
+          <h3>Рабочие специальности</h3>
+        </a>
+      </a>
+      <a href="">
+        <img src="{%static 'img/bloks/5.jpg'%}"  alt="">
+        <h3>Профессиональная переподготовка</h3>
+      </a>
+      <a href="">
+        <img src="{%static 'img/bloks/1.jpg'%}"  alt="">
+        <h3>Повышение квалификации</h3>
+      </a>
+    </div>
+
+
+    <div class="course">
+        <h2>Ближайшие курсы</h2>
+
+        {% for el in courses %}
+        <a href="/course/{{el.id}}" class="course_post">
+          {% if el.image %}
+            <p> <img src="{{ el.image.url }}"></p>
+
+
+            {% endif %}
+            <img src="{%static 'img/course/img.png'%}"  alt="">
+
+          <div class="course_text">
+            <h2>{{ el.title }}</h2>
+            <p>{{ el.post }}</p>
+          </div>
+
+        </a>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+        <div class="bl_r">
+          <div class="pay">
+            <a class="pay1" href="https://pay.ugtu.net/" target="_blank">
+              <p>Оплата за обучение</p>
+            </a>
+            <a href="https://idpo.ugtu.net/media/pages/2021/02/02/2021.pdf" target="_blank">
+              <p>Стоимость обучения</p>
+            </a>
+          </div>
+
+          <div class="news">
+            <header>
+              <h2>Новости</h2>
+            </header>
+           {% for el in news %}
+      <a href="/news/{{el.id}}" class="post">
+          <h3>{{ el.date|date:"j E Y" }}</h3>
+          <p>{{ el.title }}</p>
+
+      </a>
+      {% endfor %}
+          </div>
+
+            <a class="questions" href="">
+            <p>Заказать консультацию</p>
+            </a>
+
+      <div class="schedule">
+          <h2>График работы</h2>
+
+          <table id="schedule">
+              <tr>
+                <td class="day">Пн</td>
+                <td>8:30 – 18:30</td>
+              </tr>
+              <tr>
+                <td class="day">Вт</td>
+                <td>8:30 – 18:30</td>
+              </tr>
+              <tr>
+                <td class="day">Ср</td>
+                <td>8:30 – 18:30</td>
+              </tr>
+              <tr>
+                <td class="day">Чт</td>
+                <td>8:30 – 18:30</td>
+              </tr>
+              <tr>
+                <td class="day">Пт</td>
+                <td>8:30 – 18:30</td>
+              </tr>
+              <tr>
+                <td class="day">Сб</td>
+                <td>8:30 - 14:30</td>
+              </tr>
+              <tr>
+               <td class="weekend">Вс</td>
+                <td>Выходной</td>
+              </tr>
+        </table>
+      </div>
+
+
+        <div class="social">
+            <h2>Мы в соцсетях</h2>
+                <div class="social-b">
+                    <a class="social-vk" href="https://vk.com/idpo.ugtu" target="_blank">
+                        <img src="{%static 'img/ico/vk.png'%}" alt="">
+                    </a>
+                    <a class="social-inst" href="https://www.instagram.com/idpo.ugtu/" target="_blank">
+                      <img src="{%static 'img/ico/inst.png'%}" alt="">
+                    </a>
+                </div>
+          </div>
+
+
+  </div>
+
+</div>
+
+
+
+
+
+   
+
+{% endblock %}
+      
